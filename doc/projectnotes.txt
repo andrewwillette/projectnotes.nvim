@@ -1,0 +1,3 @@
+Show this doc when checking dailynotes help
+* projectnotes.vim *
+Show this maybe
