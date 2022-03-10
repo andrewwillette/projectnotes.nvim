@@ -1,6 +1,3 @@
--- Creates directories in ~/git/manual/solution_specific/<current_solution>
--- Triggers telescope file selection on the current directories solution notes
-
 local lfs = require("lfs")
 
 local M = {}
@@ -140,7 +137,6 @@ M.setup = function(opts)
             if not (projectInitialized()) then
                 initProjectNotes()
             end
-            -- if M._notes_root exists in current buffer (getCurrentBufferAbsolute())
             if string.match(getCurrentBufferAbsolutePath(), M._notes_root) then
                 TelescopeCwd = getDerivedFilepathFromProjectNotesAndCurrentDir()
             else
