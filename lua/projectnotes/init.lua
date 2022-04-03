@@ -83,7 +83,7 @@ end
 -- 3 -
 --   if neither is supplied, then the corresponding absolute path of <project_name>.txt
 --   is returned
-local function getinitFile()
+local function getInitFile()
     local solutionRoot = getProjectNotesRoot()
     if (M._init_file ~= nil) then
         return vim.fn.resolve(solutionRoot .. "/" .. M._init_file)
@@ -106,7 +106,7 @@ end
 
 local function initProjectNotes()
     local projectNotesRootDir = getProjectNotesRoot()
-    local initFile = getinitFile()
+    local initFile = getInitFile()
     if not (lfs.attributes(projectNotesRootDir)) then
         lfs.mkdir(projectNotesRootDir)
     end
